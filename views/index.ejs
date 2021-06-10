@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="script.js" type="text/javascript">
+
+    </script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <meta charset="utf-8">
+    <title>ToDo List </title>
+  </head>
+  <body>
+      <h1>Todo List Application</h1>
+      <ul>
+        <% items.forEach((item,index)=>{ %>
+          <li id=<%= index %> onclick=changeStyle>
+             <%= item %>
+          </li>
+       <%  }) %>
+      </ul>
+      <form action="/" method="post">
+        <input type="text" name="todoInput" placeholder="Enter Todo Item">
+        <button type="submit" name="button">Add Item</button>
+      </form>
+  </body>
+</html>
